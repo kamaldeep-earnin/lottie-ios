@@ -73,13 +73,13 @@ extension LottieLoopMode: Equatable {
     switch (lhs, rhs) {
     case (.repeat(let lhsAmount), .repeat(let rhsAmount)),
          (.repeatBackwards(let lhsAmount), .repeatBackwards(let rhsAmount)):
-      lhsAmount == rhsAmount
+      return lhsAmount == rhsAmount
     case (.playOnce, .playOnce),
          (.loop, .loop),
          (.autoReverse, .autoReverse):
-      true
+      return true
     default:
-      false
+      return false
     }
   }
 }
